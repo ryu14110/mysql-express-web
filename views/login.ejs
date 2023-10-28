@@ -1,0 +1,12 @@
+<%-include('header.ejs')%>
+<form action="/loginProc" method="post">
+  <ul>
+    <li>로그인</li><br>
+    <li>I D : <input type="text" name="user_id" required style="margin-bottom:10px"></li>
+    <li>PW : <input type="password" name="pw" required style="margin-bottom:10px"></li>
+    
+      <button>로그인</button>
+  </ul>
+</form>
+  
+<%-include('footer.ejs')%>

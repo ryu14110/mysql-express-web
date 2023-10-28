@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <a href="/" style="text-decoration:none";><h1 style="color:green";>제임스의 홈 페이지입니다.</h1></a>
+  <header style="border-bottom:1px solid #aaa; margin-bottom:10px; padding-bottom:10px">
+    <nav>
+      <a href="/">홈</a> |
+      <a href="/profile">프로필</a> |
+      <a href="/map">찾아오시는길</a> |
+      <a href="/contact">문의하기</a> |
+      <!-- <a href="/contactList">문의내용들</a> | -->
+      
+           
+      <% if(user_id){ %>                
+        <%=name%>님 환영합니다. |
+        <a href="/logout">로그아웃</a> |     
+      <% }else{ %>
+        <a href="/login">로그인</a> |
+      <% } %>
+
+      <% if(name === '관리자'){ %>
+        <a href="/contactList">문의내용들</a> |
+        <% }else{ %>
+      <% } %>
+    
+    </nav>
+  </header>
